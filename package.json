@@ -1,0 +1,29 @@
+{
+  "name": "server-starter-pack",
+  "version": "0.1.0",
+  "description": "Express starter pack with ES6 module support, testing and code coverage",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && babel --ignore __tests__,__mocks__ --out-dir dist src",
+    "clean": "rimraf dist",
+    "start": "nodemon --exec babel-node index.js",
+    "start:prod": "NODE_ENV=production node index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "Michał Bury <michalbury@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.4.1",
+    "nodemon": "^1.18.3",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "loglevel": "^1.6.1"
+  }
+}
